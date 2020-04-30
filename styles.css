@@ -22,7 +22,13 @@
     padding-right: 20px;
     padding-left: 10px;
   }
-  
+  .prev-value{
+      display: block;
+      text-align: right;
+      background:#000;
+      color:#ccc;
+      padding:10px;
+  }
   button {
     height: 50px;
     background-color: #fff;
@@ -33,10 +39,17 @@
     color: #fff;
     box-shadow: none;
     cursor: pointer;
+    background-position: center;
+    transition: background 0.8s;
   }
   
   button:hover {
-    background-color: #303030;
+    background: #303030 radial-gradient(circle, transparent 1%, #303030 1%) center/15000%;
+  }
+  button:active {
+    background-color: #868585;
+    background-size: 100%;
+    transition: background 0s;
   }
   button:focus{
       outline: none;
@@ -60,6 +73,7 @@
   .calculator-keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    border-top:1px solid #ccc;
     grid-gap: 20px;
     padding: 20px;
     background:#000;

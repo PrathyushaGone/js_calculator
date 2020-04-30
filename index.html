@@ -4,30 +4,30 @@
     </head>
     <body>
         <div class="calculator">
-            <span id="result"></span>
+            <span id="prevResult" class="prev-value">=</span>
             <input type="text" class="calculator-screen" value="" disabled />
             <div class="calculator-keys">
-                <button type="button" class="all-clear" value="all-clear">AC</button>
-                <button type="button" class="delete" value="back">back</button>
-                <button type="button" class="operator" value="%">%</button>
+                <button type="button" class="all-clear" value="all-clear" onclick="resetCalculator()">AC</button>
+                <button type="button" class="delete" value="back" onclick="deleteLastInput()">back</button>
+                <button type="button" class="operator" value="%"  onclick="numClick('%')">%</button>
                 <div class="operators-space">
-                    <button type="button" class="operator" value="/">&divide;</button>
-                    <button type="button" class="operator" value="*">&times;</button>
-                    <button type="button" class="operator" value="-">-</button>
-                    <button type="button" class="operator" value="+">+</button>
+                    <button type="button" class="operator" value="/"  onclick="numClick('/')">/</button>
+                    <button type="button" class="operator" value="*"  onclick="numClick('*')">*</button>
+                    <button type="button" class="operator" value="-"  onclick="numClick('-')">-</button>
+                    <button type="button" class="operator" value="+"  onclick="numClick('+')">+</button>
                 </div>
-                <button type="button" value="7">7</button>
-                <button type="button" value="8">8</button>
-                <button type="button" value="9">9</button>
-                <button type="button" value="4">4</button>
-                <button type="button" value="5">5</button>
-                <button type="button" value="6">6</button>
-                <button type="button" value="1">1</button>
-                <button type="button" value="2">2</button>
-                <button type="button" value="3">3</button>
-                <button type="button" value="0">0</button>
-                <button type="button" class="decimal" value=".">.</button>
-                <button type="button" class="operator" value="=">=</button>     
+                <button type="button" value="7"  onclick="numClick('7')">7</button>
+                <button type="button" value="8"  onclick="numClick('8')">8</button>
+                <button type="button" value="9"  onclick="numClick('9')">9</button>
+                <button type="button" value="4"  onclick="numClick('4')">4</button>
+                <button type="button" value="5"  onclick="numClick('5')">5</button>
+                <button type="button" value="6"  onclick="numClick('6')">6</button>
+                <button type="button" value="1"  onclick="numClick('1')">1</button>
+                <button type="button" value="2"  onclick="numClick('2')">2</button>
+                <button type="button" value="3"  onclick="numClick('3')">3</button>
+                <button type="button" value="0"  onclick="numClick('0')">0</button>
+                <button type="button" class="decimal" value="."  onclick="numClick('.')">.</button>
+                <button type="button" class="operator" value="=" onclick="solve()">=</button>     
             </div>
           </div>
 
